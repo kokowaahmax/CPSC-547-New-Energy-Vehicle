@@ -42,7 +42,7 @@ export default function RatioChartDesOri(props) {
     var settledRatio = (resettlementSum / applicationSum).toFixed(3)
     var unSettledRatio = ((applicationSum - resettlementSum) / applicationSum).toFixed(3)
     options["series"]["data"][0]["value"] = resettlementSum
-    options["series"]["data"][1]["value"] =
+    options["series"]["data"][1]["value"] = unSettledRatio
 
 
     return <div id="Top7TypeBar">

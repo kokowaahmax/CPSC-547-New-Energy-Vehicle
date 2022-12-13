@@ -1,5 +1,6 @@
 import React from "react";
 import InsightBarChart from './InsightBarChart';
+import InsightFlowChart from "./InsightFlowChart";
 export default function InsightChart(props) {
     const {selectedView, origin, destination} = props
     // console.log("get destination in insights.js: " + destination);
@@ -10,8 +11,8 @@ export default function InsightChart(props) {
     }
     if(destination && !origin){
         return <div className="insightOnlyDest">
-        <p>Original citizenship of the most asylum applications and resettlements received by {getCountryName(destination)}</p>
-        <InsightBarChart destination={destination} origin={origin}/>
+        <p>Original citizenship of the most asylum applications and resettlements recevied by {getCountryName(destination)}</p>
+        <InsightFlowChart destination={destination} origin={origin}/>
     
         {/* <h4>Selected View: {selectedView}</h4>
         <h4>Origin: {origin}</h4>
